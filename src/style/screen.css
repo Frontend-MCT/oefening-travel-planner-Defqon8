@@ -1,0 +1,148 @@
+/*-------------------
+
+------SETTINGS-------
+
+-------------------*/
+
+:root {
+    --color-alpha: #de4831;
+    --color-beta: #f5f5dc;
+    --color-dark: #221e21;
+    --gutter: 24px;
+}
+
+/*-------------------
+
+------ELEMENTS-------
+
+-------------------*/
+
+body, html {
+    /* Positioning */
+    /* Box Model */
+    /* Fonts */
+    font-family: 'Sarabun', sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+    color: var(--color-dark);
+    /* Appearance */
+    /* Other Styles */
+}
+
+ul {
+    list-style: none;
+}
+
+img {}
+
+/*-------------------
+
+------OBJECTS--------
+
+-------------------*/
+
+.o-grid {
+    display: grid;
+    gap: calc(var(--gutter)*2);
+}
+
+/*-------------------
+
+-----COMPONENTS------
+
+-------------------*/
+
+/* SIDEBAR */
+
+.c-sidebar {
+    background: var(--color-beta);
+    overflow-x: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /*padding on the inside*/
+}
+
+.c-sidebar-header {
+    margin: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.c-sidebar-menu {
+    margin: 24px;
+}
+
+.c-sidebar-header__title {
+    font-size: 2rem;
+    margin-left: calc(var(--gutter)/2);
+}
+
+.c-sidebar-header__image {
+    max-height: calc(var(--gutter)*3);
+}
+
+.c-sidebar-counter {
+    margin: 24px;
+    vertical-align: bottom;
+    font-style: normal;
+}
+
+/* MENU */
+
+.c-menu__title {
+    font-size: 1rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: var(--color-dark);
+}
+
+.c-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 calc(var(--gutter)*3);
+}
+
+.c-menu__item {}
+
+.c-menu__link {
+    all: unset;
+    color: var(--color-alpha);
+    letter-spacing: 1px;
+    font-size: .95rem;
+    font-weight: 600;
+    will-change: opacity;
+    transition: opacity 200ms ease-out;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.c-menu__link:hover {
+    will-change: opacity;
+    transition: opacity 200ms ease-out;
+    opacity: 1
+}
+
+/* CONTENT */
+
+.c-content {
+    height: 100vh;
+    overflow-x: auto;
+}
+
+/*-------------------
+
+------UTILITIES------
+
+-------------------*/
+
+.u-grid-main-layout {
+    grid-template-columns: 350px 1fr;
+}
+
+.u-color-alpha {
+    color: var(--color-alpha);
+}
