@@ -5,7 +5,7 @@ const showCountries = jsonResponse => {
     console.log(jsonResponse);
     for(const c of jsonResponse){
         countries += `
-        <article class="">
+        <article class="load-in">
             <input id="${c.alpha2Code}" class="o-hide c-country-input" type="checkbox" name="" value="">
             <label for="${c.alpha2Code}" class="c-country js-country">
                 <div class="c-country-header">

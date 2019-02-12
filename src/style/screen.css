@@ -23,6 +23,7 @@ body, html {
     color: var(--color-dark);
     /* Appearance */
     /* Other Styles */
+    overflow-y: hidden;
 }
 
 ul {
@@ -126,6 +127,7 @@ img {}
     will-change: opacity;
     transition: opacity 200ms ease-out;
     opacity: 1;
+    animation: bgColor .1s infinite linear;
 }
 
 /* CONTENT */
@@ -148,7 +150,8 @@ img {}
 .c-country-input:checked+.c-country {
     opacity: .4;
     /* transform: rotate(360deg); */
-    animation: bgColor .1s infinite linear;
+    animation: bgColor .1s infinite linear, circle .5s infinite linear;
+    /* animation: circle .5s infinite linear; */
     transition: 150ms;
 }
 
@@ -175,10 +178,30 @@ img {}
     opacity: 0.5;
 }
 
+.load-in {
+    animation: fadein .25s linear;
+    box-shadow: 0px 0px 2px 1px lightgrey;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes circle {
+    0% {}
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes bgColor {
     12.5% {
         background-color: #FF0000;
-        transform: rotate(180deg);
     }
     25% {
         background-color: #FFA500;
